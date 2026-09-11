@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+
+# Logs
+logs
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Cobertura de tests
+coverage/
+
+# Build
+dist/
+build/
+
+# VS Code
+.vscode/settings.json
+
