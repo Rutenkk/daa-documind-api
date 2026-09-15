@@ -25,23 +25,36 @@ const registros = [
   },
 ];
 
-function limpiarUsuarios(registros) {
+// funcion tradicional
+
+/*function limpiarUsuarios(registros) {
   const usuariosLimpios = registros
     .filter((c) => c.active === "true")
-    .filter((c) => c.email.toLowerCase().includes("@usal.es"));
+    .filter((c) => c.email.toLowerCase().includes("@usal.es"))
+    .map((c, contador) => ({
+      ...c,
+      full_name: c.full_name.trim(),
+      email: c.email.toLowerCase(),
+      id: ++contador,
+    }));
 
   console.log(usuariosLimpios);
-  console.log("\n\n\n\n");
-
-  let contador = 1;
-  const usuariosFinal = usuariosLimpios.map((c) => ({
-    ...c,
-    full_name: c.full_name.trim(),
-    email: c.email.toLowerCase(),
-    id: contador++,
-  }));
-
-  console.log(usuariosFinal);
 }
 
-limpiarUsuarios(registros);
+limpiarUsuarios(registros);*/
+
+// funcion flecha
+
+const limpiarUsuarios = (usuariosLimpios) => {
+  return usuariosLimpios
+    .filter((c) => c.active === "true")
+    .filter((c) => c.email.toLowerCase().includes("@usal.es"))
+    .map((c, contador) => ({
+      ...c,
+      full_name: c.full_name.trim(),
+      email: c.email.toLowerCase(),
+      id: ++contador,
+    }));
+};
+
+console.log(limpiarUsuarios(registros));
