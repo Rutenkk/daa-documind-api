@@ -1,17 +1,30 @@
 {
-  "name": "test-api",
+  "name": "daa-documind-api",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/app.ts"
   },
   "dependencies": {
-    "express": "^5.0.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^24.0.0",
-    "tsx": "^4.19.0",
-    "typescript": "^5.6.0"
-  }
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.5",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rutenkk/daa-documind-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rutenkk/daa-documind-api/issues"
+  },
+  "homepage": "https://github.com/Rutenkk/daa-documind-api#readme"
 }
