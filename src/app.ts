@@ -1,6 +1,5 @@
-// src/app.ts
-import express, { Request, Response } from "express";
-import { DocumentItem } from "./types.js";
+import express, { type Request, type Response } from "express";
+import { type ProductItem } from "./types.js";
 
 export const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,25 +7,33 @@ const PORT = process.env.PORT || 3000;
 // Middleware para parsear cuerpos con formato JSON:
 app.use(express.json());
 
-// Almacén en memoria de documentos:
-const documents: DocumentItem[] = [
+const products: ProductItem[] = [
   {
     id: 1,
-    title: "Arquitectura de Microservicios con Node.js",
-    author: "Martin Fowler",
-    tags: ["arquitectura", "nodejs", "microservicios"],
-    content:
-      "La arquitectura de microservicios descompone un sistema en servicios desacoplados...",
-    createdAt: "2026-09-01T10:00:00.000Z",
+    name: "Teclado Mecánico RGB",
+    category: "perifericos",
+    price: 89.99,
+    stock: 15,
+    active: true,
+    createdAt: "2026-09-01T08:00:00Z",
   },
   {
     id: 2,
-    title: "Introducción a Embeddings y Búsqueda Vectorial",
-    author: "Andrew Ng",
-    tags: ["ia", "embeddings", "vector-search"],
-    content:
-      "Los embeddings son representaciones vectoriales densas de conceptos semánticos...",
-    createdAt: "2026-09-02T11:30:00.000Z",
+    name: "Ratón Óptico Ergonómico",
+    category: "perifericos",
+    price: 45.5,
+    stock: 3,
+    active: true,
+    createdAt: "2026-09-02T09:00:00Z",
+  },
+  {
+    id: 3,
+    name: "Monitor 27 Pulgadas 4K",
+    category: "monitores",
+    price: 349.0,
+    stock: 0,
+    active: false,
+    createdAt: "2026-09-03T10:00:00Z",
   },
 ];
 

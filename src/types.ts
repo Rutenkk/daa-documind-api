@@ -1,10 +1,9 @@
-// src/types.ts
-
-export interface DocumentItem {
+export interface ProductItem {
   id: number;
-  title: string;
-  author: string;
-  tags: string[];
-  content: string;
+  name: string;
+  category: string;
+  price: number;
+  stock: number;
+  active: boolean;
   createdAt: string;
 }
